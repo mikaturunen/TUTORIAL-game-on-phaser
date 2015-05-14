@@ -1,12 +1,12 @@
-// Create the game object itbackgroundelf
+// phaserCreate the game object itbackgroundelf
 var game = new Phaser.Game(
-    800, 600,               // 800 x 600 rebackgroundolution.
-    Phaser.AUTO,            // Allow Phaser to determine Canvas or WebGL
-    "barkanoid",            // The HTML element ID we will connect Phaser to.
-    {                       // Functions (callbacks) for Phaser to call in
-        preload: preload,   // in different states of its execution
-        create: create,
-        update: update
+    800, 600,                       // 800 x 600 rebackgroundolution.
+    Phaser.AUTO,                    // Allow Phaser to determine Canvas or WebGL
+    "barkanoid",                    // The HTML element ID we will connect Phaser to.
+    {                               // Functions (callbacks) for Phaser to call in
+        preload: phaserPreload,     // in different states of its execution
+        create: phaserCreate,
+        update: phaserUpdate
     }
 );
 
@@ -34,9 +34,9 @@ var boldTextOptions = {
 };
 
 /**
- * Preload callback. Used to load all assets commonly into Phaser.
+ * Preload callback. Used to load all assets into Phaser.
  */
-function preload() {
+function phaserPreload() {
     // Loading the background abackground an image
     game.load.image("background", "/assets/background.jpg");
     // Loading the tiles
@@ -52,9 +52,10 @@ function preload() {
 }
 
 /**
- * Create callback.
+ * Create callback. Used to create all game related objects, set states and other pre-game running
+ * details.
  */
-function create() {
+function phaserCreate() {
     game.physics.startSystem(Phaser.Physics.ARCADE);
     // All walls collide except the bottom
     game.physics.arcade.checkCollision.down = false;
@@ -70,7 +71,7 @@ function create() {
         for (var x = 0; x < 15; x++) {
             // Randomizing the tile sprite we load for the tile
             var randomTileNumber = Math.floor(Math.random() * 6);
-            var tile = tiles.create(120 + (x * 36), 100 + (y * 52), "tile" + randomTileNumber);
+            var tile = tiles.phaserCreate(120 + (x * 36), 100 + (y * 52), "tile" + randomTileNumber);
             tile.body.bounce.set(1);
             tile.body.immovable = true;
         }
@@ -84,7 +85,7 @@ function create() {
     paddle.body.bounce.set(1);
     paddle.body.immovable = true;
 
-    // Create the ball
+    // phaserCreate the ball
     ball = game.add.sprite(game.world.centerX, paddle.y - 16, "ball");
     ball.anchor.set(0.5);
     ball.checkWorldBounds = true;
@@ -103,9 +104,9 @@ function create() {
 }
 
 /**
- * Phaser Engines update loop that gets called every update.
+ * Phaser Engines update loop that gets called every phaserUpdate.
  */
-function update () {
+function phaserUpdate () {
     paddle.x = game.input.x;
 
     // Making sure the player does not move out of bounds
@@ -126,75 +127,95 @@ function update () {
 
 }
 
-function releaseBall () {
-    if (ballOnPaddle) {
-        ballOnPaddle = false;
-        ball.body.velocity.y = -300;
-        ball.body.velocity.x = -75;
-        introText.visible = false;
-    }
-}
+/**
+ * Set of helper functions.
+ */
+var helpers = {
+    /**
+     * Releases ball from the paddle.
+     */
+    release: function() {
+        if (ballOnPaddle) {
+            ballOnPaddle = false;
+            ball.body.velocity.y = -300;
+            ball.body.velocity.x = -75;
+            introText.visible = false;
+        }
+    },
 
-function ballLost () {
-    lives--;
-    livesText.text = "lives: " + lives;
+    /**
+     * Ball went out of bounds.
+     */
+    death: function() {
+        lives--;
+        livesText.text = "lives: " + lives;
 
-    if (lives === 0) {
-        gameOver();
-    } else {
-        ballOnPaddle = true;
-        ball.reset(paddle.body.x + 16, paddle.y - 16);
-        ball.animations.stop();
-    }
-}
+        if (lives === 0) {
+            gameOver();
+        } else {
+            ballOnPaddle = true;
+            ball.reset(paddle.body.x + 16, paddle.y - 16);
+            ball.animations.stop();
+        }
+    },
 
-function gameOver () {
-    ball.body.velocity.setTo(0, 0);
-    introText.text = "Game Over!";
-    introText.visible = true;
-}
+    /**
+     * Game over, all lives lost.
+     */
+    gameOver: function() {
+        ball.body.velocity.setTo(0, 0);
+        introText.text = "Game Over!";
+        introText.visible = true;
+    },
 
-function ballCollideWithTile (ball, tile) {
-    tile.kill();
+    /**
+     * Callback for when ball collides with Tiles.
+     */
+    ballCollideWithTile: function(ball, tile) {
+        tile.kill();
 
-    score += 10;
-    scoreText.text = "score: " + score;
-
-    //  Are they any tiles left?
-    if (tiles.countLiving() <= 0) {
-        //  New level start
-        score += 1000;
+        score += 10;
         scoreText.text = "score: " + score;
-        introText.text = "- Next Level -";
 
-        //  Attach ball to the players paddle
-        ballOnPaddle = true;
-        ball.body.velocity.set(0);
-        ball.x = paddle.x + 16;
-        ball.y = paddle.y - 16;
-        ball.animations.stop();
+        //  Are they any tiles left?
+        if (tiles.countLiving() <= 0) {
+            //  New level start
+            score += 1000;
+            scoreText.text = "score: " + score;
+            introText.text = "- Next Level -";
 
-        // Tell tiles to revive
-        tiles.callAll("revive");
+            //  Attach ball to the players paddle
+            ballOnPaddle = true;
+            ball.body.velocity.set(0);
+            ball.x = paddle.x + 16;
+            ball.y = paddle.y - 16;
+            ball.animations.stop();
+
+            // Tell tiles to revive
+            tiles.callAll("revive");
+        }
+
+    },
+
+    /**
+     * Callback for when ball collides with the players paddle.
+     */
+    ballCollideWithPaddle: function(ball, paddle) {
+        var diff = 0;
+
+        // Super simplistic bounce physics for the ball movement
+        if (ball.x < paddle.x) {
+            //  Ball is on the left-hand side
+            diff = paddle.x - ball.x;
+            ball.body.velocity.x = (-10 * diff);
+        } else if (ball.x > paddle.x) {
+            //  Ball is on the right-hand side
+            diff = ball.x -paddle.x;
+            ball.body.velocity.x = (10 * diff);
+        } else {
+            //  Ball is perfectly in the middle
+            //  Add a little random X to backgroundtop it bouncing backgroundtraight up!
+            ball.body.velocity.x = 2 + Math.random() * 8;
+        }
     }
-
-}
-
-function ballCollideWithPaddle (ball, paddle) {
-    var diff = 0;
-
-    // Super simplistic bounce physics for the ball movement
-    if (ball.x < paddle.x) {
-        //  Ball is on the left-hand side
-        diff = paddle.x - ball.x;
-        ball.body.velocity.x = (-10 * diff);
-    } else if (ball.x > paddle.x) {
-        //  Ball is on the right-hand side
-        diff = ball.x -paddle.x;
-        ball.body.velocity.x = (10 * diff);
-    } else {
-        //  Ball is perfectly in the middle
-        //  Add a little random X to backgroundtop it bouncing backgroundtraight up!
-        ball.body.velocity.x = 2 + Math.random() * 8;
-    }
-}
+};
