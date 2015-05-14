@@ -1,5 +1,5 @@
 {
-    "framebackground": [
+    "frames": [
         {
             "filename": "ball_1.png",
             "frame": {
@@ -8,15 +8,15 @@
                 "w": 16,
                 "h": 16
             },
-            "rotated": falbackgrounde,
-            "trimmed": falbackgrounde,
-            "backgroundpritebackgroundourcebackgroundize": {
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
                 "x": 0,
                 "y": 0,
                 "w": 16,
                 "h": 16
             },
-            "backgroundourcebackgroundize": {
+            "sourceSize": {
                 "w": 16,
                 "h": 16
             }
@@ -29,15 +29,15 @@
                 "w": 16,
                 "h": 16
             },
-            "rotated": falbackgrounde,
-            "trimmed": falbackgrounde,
-            "backgroundpritebackgroundourcebackgroundize": {
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
                 "x": 0,
                 "y": 0,
                 "w": 16,
                 "h": 16
             },
-            "backgroundourcebackgroundize": {
+            "sourceSize": {
                 "w": 16,
                 "h": 16
             }
@@ -50,15 +50,15 @@
                 "w": 16,
                 "h": 16
             },
-            "rotated": falbackgrounde,
-            "trimmed": falbackgrounde,
-            "backgroundpritebackgroundourcebackgroundize": {
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
                 "x": 0,
                 "y": 0,
                 "w": 16,
                 "h": 16
             },
-            "backgroundourcebackgroundize": {
+            "sourceSize": {
                 "w": 16,
                 "h": 16
             }
@@ -71,15 +71,15 @@
                 "w": 16,
                 "h": 16
             },
-            "rotated": falbackgrounde,
-            "trimmed": falbackgrounde,
-            "backgroundpritebackgroundourcebackgroundize": {
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
                 "x": 0,
                 "y": 0,
                 "w": 16,
                 "h": 16
             },
-            "backgroundourcebackgroundize": {
+            "sourceSize": {
                 "w": 16,
                 "h": 16
             }
@@ -92,15 +92,15 @@
                 "w": 16,
                 "h": 16
             },
-            "rotated": falbackgrounde,
-            "trimmed": falbackgrounde,
-            "backgroundpritebackgroundourcebackgroundize": {
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
                 "x": 0,
                 "y": 0,
                 "w": 16,
                 "h": 16
             },
-            "backgroundourcebackgroundize": {
+            "sourceSize": {
                 "w": 16,
                 "h": 16
             }
@@ -113,15 +113,15 @@
                 "w": 32,
                 "h": 17
             },
-            "rotated": falbackgrounde,
-            "trimmed": falbackgrounde,
-            "backgroundpritebackgroundourcebackgroundize": {
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
                 "x": 0,
                 "y": 0,
                 "w": 32,
                 "h": 17
             },
-            "backgroundourcebackgroundize": {
+            "sourceSize": {
                 "w": 32,
                 "h": 17
             }
@@ -134,15 +134,15 @@
                 "w": 32,
                 "h": 17
             },
-            "rotated": falbackgrounde,
-            "trimmed": falbackgrounde,
-            "backgroundpritebackgroundourcebackgroundize": {
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
                 "x": 0,
                 "y": 0,
                 "w": 32,
                 "h": 17
             },
-            "backgroundourcebackgroundize": {
+            "sourceSize": {
                 "w": 32,
                 "h": 17
             }
@@ -155,15 +155,15 @@
                 "w": 30,
                 "h": 13
             },
-            "rotated": falbackgrounde,
+            "rotated": false,
             "trimmed": true,
-            "backgroundpritebackgroundourcebackgroundize": {
+            "spriteSourceSize": {
                 "x": 1,
                 "y": 1,
                 "w": 30,
                 "h": 13
             },
-            "backgroundourcebackgroundize": {
+            "sourceSize": {
                 "w": 32,
                 "h": 17
             }
@@ -176,15 +176,15 @@
                 "w": 24,
                 "h": 9
             },
-            "rotated": falbackgrounde,
+            "rotated": false,
             "trimmed": true,
-            "backgroundpritebackgroundourcebackgroundize": {
+            "spriteSourceSize": {
                 "x": 4,
                 "y": 4,
                 "w": 24,
                 "h": 9
             },
-            "backgroundourcebackgroundize": {
+            "sourceSize": {
                 "w": 32,
                 "h": 17
             }
@@ -197,15 +197,15 @@
                 "w": 32,
                 "h": 15
             },
-            "rotated": falbackgrounde,
-            "trimmed": falbackgrounde,
-            "backgroundpritebackgroundourcebackgroundize": {
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
                 "x": 0,
                 "y": 0,
                 "w": 32,
                 "h": 15
             },
-            "backgroundourcebackgroundize": {
+            "sourceSize": {
                 "w": 32,
                 "h": 15
             }
@@ -218,15 +218,15 @@
                 "w": 32,
                 "h": 15
             },
-            "rotated": falbackgrounde,
-            "trimmed": falbackgrounde,
-            "backgroundpritebackgroundourcebackgroundize": {
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
                 "x": 0,
                 "y": 0,
                 "w": 32,
                 "h": 15
             },
-            "backgroundourcebackgroundize": {
+            "sourceSize": {
                 "w": 32,
                 "h": 15
             }
@@ -239,15 +239,15 @@
                 "w": 30,
                 "h": 13
             },
-            "rotated": falbackgrounde,
+            "rotated": false,
             "trimmed": true,
-            "backgroundpritebackgroundourcebackgroundize": {
+            "spriteSourceSize": {
                 "x": 1,
                 "y": 0,
                 "w": 30,
                 "h": 13
             },
-            "backgroundourcebackgroundize": {
+            "sourceSize": {
                 "w": 32,
                 "h": 15
             }
@@ -260,15 +260,15 @@
                 "w": 24,
                 "h": 11
             },
-            "rotated": falbackgrounde,
+            "rotated": false,
             "trimmed": true,
-            "backgroundpritebackgroundourcebackgroundize": {
+            "spriteSourceSize": {
                 "x": 4,
                 "y": 3,
                 "w": 24,
                 "h": 11
             },
-            "backgroundourcebackgroundize": {
+            "sourceSize": {
                 "w": 32,
                 "h": 15
             }
@@ -281,15 +281,15 @@
                 "w": 32,
                 "h": 16
             },
-            "rotated": falbackgrounde,
-            "trimmed": falbackgrounde,
-            "backgroundpritebackgroundourcebackgroundize": {
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
                 "x": 0,
                 "y": 0,
                 "w": 32,
                 "h": 16
             },
-            "backgroundourcebackgroundize": {
+            "sourceSize": {
                 "w": 32,
                 "h": 16
             }
@@ -302,15 +302,15 @@
                 "w": 32,
                 "h": 16
             },
-            "rotated": falbackgrounde,
-            "trimmed": falbackgrounde,
-            "backgroundpritebackgroundourcebackgroundize": {
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
                 "x": 0,
                 "y": 0,
                 "w": 32,
                 "h": 16
             },
-            "backgroundourcebackgroundize": {
+            "sourceSize": {
                 "w": 32,
                 "h": 16
             }
@@ -323,15 +323,15 @@
                 "w": 30,
                 "h": 12
             },
-            "rotated": falbackgrounde,
+            "rotated": false,
             "trimmed": true,
-            "backgroundpritebackgroundourcebackgroundize": {
+            "spriteSourceSize": {
                 "x": 1,
                 "y": 2,
                 "w": 30,
                 "h": 12
             },
-            "backgroundourcebackgroundize": {
+            "sourceSize": {
                 "w": 32,
                 "h": 16
             }
@@ -344,15 +344,15 @@
                 "w": 24,
                 "h": 10
             },
-            "rotated": falbackgrounde,
+            "rotated": false,
             "trimmed": true,
-            "backgroundpritebackgroundourcebackgroundize": {
+            "spriteSourceSize": {
                 "x": 4,
                 "y": 3,
                 "w": 24,
                 "h": 10
             },
-            "backgroundourcebackgroundize": {
+            "sourceSize": {
                 "w": 32,
                 "h": 16
             }
@@ -365,15 +365,15 @@
                 "w": 30,
                 "h": 48
             },
-            "rotated": falbackgrounde,
+            "rotated": false,
             "trimmed": true,
-            "backgroundpritebackgroundourcebackgroundize": {
+            "spriteSourceSize": {
                 "x": 1,
                 "y": 16,
                 "w": 30,
                 "h": 48
             },
-            "backgroundourcebackgroundize": {
+            "sourceSize": {
                 "w": 32,
                 "h": 64
             }
@@ -386,36 +386,36 @@
                 "w": 48,
                 "h": 16
             },
-            "rotated": falbackgrounde,
-            "trimmed": falbackgrounde,
-            "backgroundpritebackgroundourcebackgroundize": {
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
                 "x": 0,
                 "y": 0,
                 "w": 48,
                 "h": 16
             },
-            "backgroundourcebackgroundize": {
+            "sourceSize": {
                 "w": 48,
                 "h": 16
             }
         },
         {
-            "filename": "paddle_backgroundmall.png",
+            "filename": "paddle_small.png",
             "frame": {
                 "x": 148,
                 "y": 38,
                 "w": 32,
                 "h": 16
             },
-            "rotated": falbackgrounde,
-            "trimmed": falbackgrounde,
-            "backgroundpritebackgroundourcebackgroundize": {
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
                 "x": 0,
                 "y": 0,
                 "w": 32,
                 "h": 16
             },
-            "backgroundourcebackgroundize": {
+            "sourceSize": {
                 "w": 32,
                 "h": 16
             }
@@ -428,15 +428,15 @@
                 "w": 16,
                 "h": 16
             },
-            "rotated": falbackgrounde,
-            "trimmed": falbackgrounde,
-            "backgroundpritebackgroundourcebackgroundize": {
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
                 "x": 0,
                 "y": 0,
                 "w": 16,
                 "h": 16
             },
-            "backgroundourcebackgroundize": {
+            "sourceSize": {
                 "w": 16,
                 "h": 16
             }
@@ -449,15 +449,15 @@
                 "w": 16,
                 "h": 16
             },
-            "rotated": falbackgrounde,
-            "trimmed": falbackgrounde,
-            "backgroundpritebackgroundourcebackgroundize": {
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
                 "x": 0,
                 "y": 0,
                 "w": 16,
                 "h": 16
             },
-            "backgroundourcebackgroundize": {
+            "sourceSize": {
                 "w": 16,
                 "h": 16
             }
@@ -470,15 +470,15 @@
                 "w": 32,
                 "h": 16
             },
-            "rotated": falbackgrounde,
-            "trimmed": falbackgrounde,
-            "backgroundpritebackgroundourcebackgroundize": {
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
                 "x": 0,
                 "y": 0,
                 "w": 32,
                 "h": 16
             },
-            "backgroundourcebackgroundize": {
+            "sourceSize": {
                 "w": 32,
                 "h": 16
             }
@@ -491,15 +491,15 @@
                 "w": 32,
                 "h": 16
             },
-            "rotated": falbackgrounde,
-            "trimmed": falbackgrounde,
-            "backgroundpritebackgroundourcebackgroundize": {
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
                 "x": 0,
                 "y": 0,
                 "w": 32,
                 "h": 16
             },
-            "backgroundourcebackgroundize": {
+            "sourceSize": {
                 "w": 32,
                 "h": 16
             }
@@ -512,15 +512,15 @@
                 "w": 30,
                 "h": 12
             },
-            "rotated": falbackgrounde,
+            "rotated": false,
             "trimmed": true,
-            "backgroundpritebackgroundourcebackgroundize": {
+            "spriteSourceSize": {
                 "x": 1,
                 "y": 2,
                 "w": 30,
                 "h": 12
             },
-            "backgroundourcebackgroundize": {
+            "sourceSize": {
                 "w": 32,
                 "h": 16
             }
@@ -533,15 +533,15 @@
                 "w": 24,
                 "h": 10
             },
-            "rotated": falbackgrounde,
+            "rotated": false,
             "trimmed": true,
-            "backgroundpritebackgroundourcebackgroundize": {
+            "spriteSourceSize": {
                 "x": 4,
                 "y": 3,
                 "w": 24,
                 "h": 10
             },
-            "backgroundourcebackgroundize": {
+            "sourceSize": {
                 "w": 32,
                 "h": 16
             }
@@ -554,15 +554,15 @@
                 "w": 30,
                 "h": 48
             },
-            "rotated": falbackgrounde,
+            "rotated": false,
             "trimmed": true,
-            "backgroundpritebackgroundourcebackgroundize": {
+            "spriteSourceSize": {
                 "x": 1,
                 "y": 0,
                 "w": 30,
                 "h": 48
             },
-            "backgroundourcebackgroundize": {
+            "sourceSize": {
                 "w": 32,
                 "h": 48
             }
@@ -575,15 +575,15 @@
                 "w": 30,
                 "h": 48
             },
-            "rotated": falbackgrounde,
+            "rotated": false,
             "trimmed": true,
-            "backgroundpritebackgroundourcebackgroundize": {
+            "spriteSourceSize": {
                 "x": 1,
                 "y": 16,
                 "w": 30,
                 "h": 48
             },
-            "backgroundourcebackgroundize": {
+            "sourceSize": {
                 "w": 32,
                 "h": 64
             }
@@ -591,14 +591,14 @@
     ],
     "meta": {
         "app": "http://www.texturepacker.com",
-        "verbackgroundion": "1.0",
+        "version": "1.0",
         "image": "breakout.png",
         "format": "RGBA8888",
-        "backgroundize": {
+        "size": {
             "w": 302,
             "h": 64
         },
-        "backgroundcale": "1",
-        "backgroundmartupdate": "$TexturePacker:backgroundmartUpdate:c510ff2f709e8d175b059cd1cbe64773$"
+        "scale": "1",
+        "smartupdate": "$TexturePacker:SmartUpdate:c510ff2f709e8d175b059cd1cbe64773$"
     }
 }
