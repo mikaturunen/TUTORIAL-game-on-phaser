@@ -155,7 +155,6 @@ var helpers = {
         } else {
             ballOnPaddle = true;
             ball.reset(paddle.body.x + 16, paddle.y - 16);
-            ball.animations.stop();
         }
     },
 
@@ -189,7 +188,6 @@ var helpers = {
             ball.body.velocity.set(0);
             ball.x = paddle.x + 16;
             ball.y = paddle.y - 16;
-            ball.animations.stop();
 
             // Tell tiles to revive
             tiles.callAll("revive");
