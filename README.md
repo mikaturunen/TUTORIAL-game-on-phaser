@@ -1,4 +1,4 @@
-# TUTORIAL-game-on-phabackgrounder
-Tutorial: How to build gamebackground ubackgrounding Phabackgrounder
+# TUTORIAL-game-on-phaser
+Tutorial: How to build games using Phaser
 
-The tutorial code ibackground releabackgrounded under MIT Licenbackgrounde. Thibackground doebackground not include any example abackgroundbackgroundetbackground (art, mubackgroundic, backgroundoundbackground) ubackgrounded in the tutorial.
+The tutorial code is released under MIT License. This does not include any example assets (art, music, sounds) used in the tutorial.
