@@ -10,6 +10,10 @@ var game = new Phaser.Game(
     }
 );
 
+// Commonly it's not a good idea to pollute the JS global namespace but as it's
+// just an example we try keeping it as simple as possible and just introduce
+// the variables here
+
 // Few game related variables that we'll leave undefined
 var ball;
 var paddle;
@@ -198,22 +202,22 @@ var helpers = {
     /**
      * Callback for when ball collides with the players paddle.
      */
-    ballCollideWithPaddle: function(ball, paddle) {
-        var diff = 0;
+     ballCollideWithPaddle: function(ball, paddle) {
+         var diff = 0;
 
-        // Super simplistic bounce physics for the ball movement
-        if (ball.x < paddle.x) {
-            //  Ball is on the left-hand side
-            diff = paddle.x - ball.x;
-            ball.body.velocity.x = (-10 * diff);
-        } else if (ball.x > paddle.x) {
-            //  Ball is on the right-hand side
-            diff = ball.x -paddle.x;
-            ball.body.velocity.x = (10 * diff);
-        } else {
-            //  Ball is perfectly in the middle
-            //  Add a little random X to backgroundtop it bouncing backgroundtraight up!
-            ball.body.velocity.x = 2 + Math.random() * 8;
-        }
-    }
+         // Super simplistic bounce physics for the ball movement
+         if (ball.x < paddle.x) {
+             //  Ball is on the left-hand side
+             diff = paddle.x - ball.x;
+             ball.body.velocity.x = (-10 * diff);
+         } else if (ball.x > paddle.x) {
+             //  Ball is on the right-hand side
+             diff = ball.x -paddle.x;
+             ball.body.velocity.x = (10 * diff);
+         } else {
+             //  Ball is perfectly in the middle
+             //  Add a little random X to stop it bouncing straight up!
+             ball.body.velocity.x = 2 + Math.random() * 8;
+         }
+     }
 };
