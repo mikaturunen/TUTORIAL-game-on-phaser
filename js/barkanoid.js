@@ -1,4 +1,4 @@
-// phaserCreate the game object itbackgroundelf
+// phaserCreate the game object itself
 var game = new Phaser.Game(
     800, 600,                       // 800 x 600 rebackgroundolution.
     Phaser.AUTO,                    // Allow Phaser to determine Canvas or WebGL
@@ -14,12 +14,13 @@ var game = new Phaser.Game(
 var ball;
 var paddle;
 var tiles;
-var ballOnPaddle = true;
-var lives = 3;
-var score = 0;
 var livesText;
 var introText;
 var background;
+
+var ballOnPaddle = true;
+var lives = 3;
+var score = 0;
 
 var defaultTextOptions = {
     font: "20px Arial",
@@ -71,7 +72,7 @@ function phaserCreate() {
         for (var x = 0; x < 15; x++) {
             // Randomizing the tile sprite we load for the tile
             var randomTileNumber = Math.floor(Math.random() * 6);
-            var tile = tiles.phaserCreate(120 + (x * 36), 100 + (y * 52), "tile" + randomTileNumber);
+            var tile = tiles.create(120 + (x * 36), 100 + (y * 52), "tile" + randomTileNumber);
             tile.body.bounce.set(1);
             tile.body.immovable = true;
         }
@@ -92,15 +93,15 @@ function phaserCreate() {
     game.physics.enable(ball, Phaser.Physics.ARCADE);
     ball.body.collideWorldBounds = true;
     ball.body.bounce.set(1);
-    // When it goes out of bounds we'll call the function ballLost
-    ball.events.onOutOfBounds.add(ballLost, this);
+    // When it goes out of bounds we'll call the function 'death'
+    ball.events.onOutOfBounds.add(helpers.death, this);
 
     // Setup score text
     scoreText = game.add.text(32, 550, "score: 0", defaultTextOptions);
     livesText = game.add.text(680, 550, "lives: 3", defaultTextOptions);
     introText = game.add.text(game.world.centerX, 400, "- click to start -", boldTextOptions);
     introText.anchor.setTo(0.5, 0.5);
-    game.input.onDown.add(releaseBall, this);
+    game.input.onDown.add(helpers.release, this);
 }
 
 /**
@@ -121,10 +122,9 @@ function phaserUpdate () {
         ball.body.x = paddle.x;
     } else {
         // Check collisions
-        game.physics.arcade.collide(ball, paddle, ballCollideWithPaddle, null, this);
-        game.physics.arcade.collide(ball, tiles, ballCollideWithTile, null, this);
+        game.physics.arcade.collide(ball, paddle, helpers.ballCollideWithPaddle, null, this);
+        game.physics.arcade.collide(ball, tiles, helpers.ballCollideWithTile, null, this);
     }
-
 }
 
 /**
@@ -151,7 +151,7 @@ var helpers = {
         livesText.text = "lives: " + lives;
 
         if (lives === 0) {
-            gameOver();
+            helpers.gameOver();
         } else {
             ballOnPaddle = true;
             ball.reset(paddle.body.x + 16, paddle.y - 16);
