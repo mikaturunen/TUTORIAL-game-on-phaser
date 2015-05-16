@@ -1,6 +1,6 @@
 {
   "name": "tutorial-game-on-phaser",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Tutorial: How to build games using Phaser",
   "main": "barkanoid.js",
   "scripts": {
